@@ -1,0 +1,42 @@
+{
+    "version": "1.1.46",
+    "name": "__MSG_extensionName__",
+    "description": "__MSG_extensionDescription__",
+    "developer": {
+        "name": "Reinvent the Wheel Solutions",
+        "url": "https://github.com/rtws/"
+    },
+    "homepage_url": "https://github.com/rtws/update-notification/",
+    "permissions": [
+        "storage",
+        "notifications",
+        "alarms",
+        "https://ftp.opera.com/*"
+    ],
+    "background": {
+        "scripts": [
+            "scripts/settings.js",
+            "scripts/background.js",
+            "scripts/chromereload.js"
+        ]
+    },
+    "icons": {
+        "16": "images/icon-16.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/toolbar-normal-19.png",
+            "38": "images/toolbar-normal-38.png"
+        },
+        "default_title": "__MSG_extensionName__"
+    },
+    "default_locale": "en",
+    "options_page": "pages/options.html",
+    "web_accessible_resources": [
+        "pages/updated.html",
+        "images/notification.png"
+    ],
+    "manifest_version": 2
+}
