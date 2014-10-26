@@ -1,6 +1,6 @@
 {
   "extensionVersion": {
-    "message": "1.1.46",
+    "message": "1.1.47",
     "description": "Extension version"
   },
   "extensionName": {
@@ -8,7 +8,7 @@
     "description": "Extension name"
   },
   "extensionDescription": {
-    "message": "Be notified of Opera automatic updates",
+    "message": "Get notified of Opera automatic updates",
     "description": "Extension description"
   },
   "updateAvailableNotification": {
