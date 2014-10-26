@@ -117,18 +117,23 @@ function Extension()
 	localStorage.lastInstalledVersion = this.updateManager.installedVersion;
 }
 
+Extension.prototype.resetIcon = function()
+{
+	chrome.browserAction.setBadgeText({ text: "" });
+	chrome.browserAction.setIcon({
+		path: {
+			"19": "images/toolbar-normal-19.png",
+		    "38": "images/toolbar-normal-38.png"
+		}
+    });
+};
+
 Extension.prototype.acknowledge = function()
 {
 	if (this.hasUpdate)
 	{
 		this.hasUpdate = false;
-		chrome.browserAction.setBadgeText({ text: "" });
-		chrome.browserAction.setIcon({
-			path: {
-				"19": "images/toolbar-normal-19.png",
-			    "38": "images/toolbar-normal-38.png"
-			}
-	    });
+        this.resetIcon();
 
 		chrome.tabs.create({
 			url: "opera://about"
@@ -182,6 +187,7 @@ Extension.prototype.checkUpdate = function()
 Extension.prototype.initialize = function()
 {
     var self = this;
+    this.resetIcon();
     this.getSettings(function()
     {
         self.checkUpdate();
@@ -254,4 +260,3 @@ chrome.browserAction.onClicked.addListener(function(tab)
 });
 
 extension.initialize();
-	

@@ -1,0 +1,14 @@
+﻿- EN ----------------------------------------------------------------
+Opera updates itself automatically and in most cases silently. It downloads updates in the background, installs them at next program launch, and you will be notified only of major updates. Using this extension you will be notified of every small change.
+
+If you are browsing the net while a new version has been released, you will get a message about it. Install new developer builds even before Desktop Team posts about it :)
+
+Works on all update streams (stable, beta and developer).
+
+- HU ----------------------------------------------------------------
+Az Opera automatikusan és a legtöbbször csendben frissíti magát. A háttérben letölti a frissítéseket, a következő programindításkor telepíti azokat, és csak a nagyobb frissítésekről értesít. Ezzel a bővítménnyel értesülhetsz minden apró változásról.
+
+Ha éppen böngészel, miközben egy új verzió kerül kiadásra, akkor üzenetet kapsz a lehetséges frissítésről. Telepítsd az új fejlesztői verziót még a blogbejegyzés megjelenése előtt :)
+
+Mindegyik frissítési csatornán működik (stabil, béta és fejlesztői).
+
