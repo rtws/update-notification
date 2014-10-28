@@ -19,5 +19,6 @@ window.addEventListener("load", function (e)
 	$("#previous-version").html(versions[0]);
 	$("#installed-version").html(versions[1]);
 	$("#changelog-version").html(major);
+    
 	$("#changelog-link").attr("href", "http://blogs.opera.com/desktop/changelog-" + major + "/");
 }, false);

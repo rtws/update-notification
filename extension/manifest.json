@@ -1,5 +1,5 @@
 {
-    "version": "1.1.48",
+    "version": "1.1.74",
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
     "developer": {
@@ -9,8 +9,8 @@
     "homepage_url": "https://github.com/rtws/update-notification/",
     "permissions": [
         "storage",
-        "notifications",
         "alarms",
+        "notifications",
         "https://ftp.opera.com/*"
     ],
     "background": {
@@ -36,7 +36,7 @@
     "options_page": "pages/options.html",
     "web_accessible_resources": [
         "pages/updated.html",
-        "images/notification.png"
+        "images/notification-256.png"
     ],
     "manifest_version": 2
 }

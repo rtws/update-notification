@@ -114,9 +114,28 @@ module.exports = function (grunt) {
         // Reads HTML for usemin blocks to enable smart builds that automatically
         // concat, minify and revision files. Creates configurations in memory so
         // additional tasks can operate on them
+        
+        // overwrite default flow because of Opera rules
+        // https://dev.opera.com/extensions/tut_publishing_guidelines.html#acceptance-criteria
+        // "We must be able to review the code in a reasonable manner. Therefor, the code shouldn't be obfuscated."
         useminPrepare: {
             options: {
-                dest: "<%= config.dist %>/pages"
+                dest: "<%= config.dist %>/pages",
+                flow: {
+                    html: {
+                        steps: {
+                            js: [
+                                "concat"
+                            ],
+                            css: [
+                                "concat",
+                                "cssmin"
+                            ]
+                        },
+                        post: {
+                        }
+                    }
+                }
             },
             html: [
                 "<%= config.extension %>/pages/{,*/}*.html"
@@ -200,15 +219,6 @@ module.exports = function (grunt) {
         // concat: {
         //     dist: {}
         // },
-        uglify: {
-            // https://dev.opera.com/extensions/tut_publishing_guidelines.html#acceptance-criteria
-            //
-            // We must be able to review the code in a reasonable manner. Therefor, the code shouldn't be obfuscated. Binary code is not ok.
-            options: {
-                compress: false,
-                mangle: false
-            }
-        },
 
         // Copies remaining files to places other tasks can use
         copy: {
@@ -303,7 +313,11 @@ module.exports = function (grunt) {
         "concurrent:dist",
         "cssmin",
         "concat",
-        "uglify",
+
+        // do not uglify because of Opera rules
+        // https://dev.opera.com/extensions/tut_publishing_guidelines.html#acceptance-criteria
+        // "We must be able to review the code in a reasonable manner. Therefor, the code shouldn't be obfuscated."
+        //"uglify",
         "copy",
         "usemin",
         "compress"

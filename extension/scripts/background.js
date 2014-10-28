@@ -13,7 +13,7 @@ function UpdateManager()
 		return;
 
 	this.availableVersion = this.installedVersion = versionInfo[1];
-	this.isStable = versionInfo.length === 2;
+	this.isStable = typeof versionInfo[2] === "undefined";
 	this.edition = this.isStable ? "stable" : versionInfo[2];
 	this.platform = userAgent.match("Windows") ? "win" : userAgent.match("Linux") ? "linux" : userAgent.match("OS X") ? "mac" : null;
 	this.url = this.isStable ? "https://ftp.opera.com/ftp/pub/opera/desktop/" : "https://ftp.opera.com/pub/opera-" + this.edition;
@@ -39,7 +39,7 @@ UpdateManager.prototype.isUpdateAvailable = function(callback)
 	{
 		if (xhr.readyState === 4)
 		{
-			var versions = xhr.responseText.match(/<a href=\"(\d+\.\d+\.\d+\.\d+(_\d+)?)\/\">/g).map(function(version)
+			var versions = (xhr.responseText.match(/<a href=\"(\d+\.\d+\.\d+\.\d+(_\d+)?)\/\">/g) || []).map(function(version)
 			{
 				return version.slice(9, -3);
 			}).sort(function(a, b)
@@ -60,7 +60,8 @@ UpdateManager.prototype.isUpdateAvailable = function(callback)
 				}
 			});
 			
-			self.checkUpdates(versions, callback);
+			if (versions.length > 0)
+                self.checkUpdates(versions, callback);
 		}
 	};
 	xhr.open("GET", this.url, true);
@@ -152,7 +153,7 @@ Extension.prototype.checkUpdate = function()
 		{
 			var notification = new Notification(self.updateManager.format(availableVersion), {
 				body: chrome.i18n.getMessage("updateAvailableNotification"),
-				icon: chrome.extension.getURL("images/notification.png")
+				icon: chrome.extension.getURL("images/notification-256.png")
 			});
 			
 			chrome.browserAction.setBadgeText({ text: "!" });

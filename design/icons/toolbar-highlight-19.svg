@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   version="1.1"
+   xml:space="preserve"
+   viewBox="0 0 76 76"
+   height="19"
+   width="19"
+   enable-background="new 0 0 512 512"
+   y="0px"
+   x="0px"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="toolbar-normal-19.svg"
+   inkscape:export-filename="E:\projects\github\rtws\update-notification\design\icons\toolbar-normal-19.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   id="namedview3618"
+   showgrid="false"
+   inkscape:zoom="43.684211"
+   inkscape:cx="9.5"
+   inkscape:cy="9.5"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+  <metadata
+   id="metadata2994">
+    <rdf:RDF>
+      <cc:Work
+   rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+   rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+   id="defs3115">
+    <radialGradient
+   id="radialGradient5275"
+   gradientUnits="userSpaceOnUse"
+   cy="257.07999"
+   cx="250.58"
+   gradientTransform="matrix(0.14580652,0,0,0.1823802,0.08546869,-8.4852062)"
+   r="198.60001">
+      <stop
+   id="stop5269"
+   stop-color="#de8787"
+   offset="0" />
+      <stop
+   id="stop5271"
+   stop-color="#de8787"
+   stop-opacity="0"
+   offset="1" />
+    </radialGradient>
+  </defs>
+<rect
+   id="rect3147"
+   height="72.293793"
+   width="57.767086"
+   y="2.2549117"
+   x="7.7378325"
+   style="fill:none;stroke:url(#radialGradient5275);stroke-width:0.14580652" />
+<path
+   id="path5277"
+   d="M 8,35.168847 C 10.144814,29.275785 23.273233,20.707902 43.897566,28.214605 L 39.608376,40 63.720402,28.755984 52.477259,4.6425011 48.187632,16.427897 C 31.941869,10.515005 13.912892,18.922209 8.000437,35.16841 z"
+   inkscape:connector-curvature="0"
+   style="fill:#cc0f16" /><path
+   id="path5279"
+   d="m 67.720402,41.47657 c -2.14482,5.892625 -15.273235,14.460945 -35.897568,6.954242 L 36.112025,36.645417 12,47.889433 23.243433,72 27.533206,60.2165 c 16.245763,5.912746 34.274736,-2.494313 40.187196,-18.739055 z"
+   inkscape:connector-curvature="0"
+   style="fill:#cc0f16" /></svg>
