@@ -1,2 +1,2 @@
 @ECHO OFF
-copy dist.nex update-notifier.nex
+copy dist.nex update-notification.nex
